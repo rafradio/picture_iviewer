@@ -1,0 +1,113 @@
+.galleria { 
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 700px; 
+    height: 400px; 
+    background: #d799af 
+}
+.myModal {
+    display: none; 
+    /* position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100vh; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);  */
+}
+.modal_vis {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+.modal-content {
+    display: none;
+    /* width: 80%;
+    max-width: 700px;
+    height: 80%;
+    object-fit: contain; */
+}
+.modal-content-vis {  
+    display: flex;
+    width: 90%;
+    /* max-width: 700px; */
+    height: 95%;
+    object-fit: contain;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    /* animation-fill-mode: forwards;
+    animation-direction: normal; */
+} 
+.viewer
+{
+    height: 100%;
+    position: relative;
+/*                background-color: lightgreen; */
+    background-color: gray;
+}
+.rotate-picture {
+    transform: rotate(90deg);
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0);} 
+    to {-webkit-transform:scale(1);}
+}
+@keyframes zoom {
+    from {transform:scale(0);} 
+    to {transform:scale(1);}
+}
+.modal-tab { 
+    display: flex;
+    width: 80%;
+    max-width: 700px;
+    height: 5%;
+    margin-top: 10px;
+    border: 0.2px solid white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.tab-element {
+    display: flex;
+    width: 10%;
+    height: 100%;
+    margin-left: 10px;
+    border: 0.2px solid white;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+}
